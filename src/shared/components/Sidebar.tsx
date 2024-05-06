@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { StyleClass } from "primereact/styleclass";
 import { NavLink } from "react-router-dom";
+import Logo from "./Logo";
 
 interface IMainMenu {
   label: string;
@@ -36,9 +37,7 @@ export default function Sidebar() {
 
   return (
     <div className="text-black h-screen w-[24rem] hidden md:flex flex-col bg-gray-100 shadow-2xl pt-3">
-      <h1 className="text-center font-bold font-serif text-6xl text-red-300 bg-gray-700 py-2 rounded-full mx-10">
-        LaTernak
-      </h1>
+      <Logo />
       <div className="overflow-y-auto">
         <ul className="flex flex-col gap-1 p-3">
           {mainMenu.map((menu) => (
