@@ -1,12 +1,14 @@
-// import Dashboard from "@Pages/dashboard/Index";
-// import Root from "@Pages/Root";
+import { createBrowserRouter } from "react-router-dom";
 import Dashboard from "@Pages/dashboard/Index";
 import Login from "@Pages/login/Index";
 import Root from "pages/Root";
-import { createBrowserRouter } from "react-router-dom";
 import ProtectedRoute from "./ProtectedRoute";
 
 const router = createBrowserRouter([
+  {
+    path: "login",
+    element: <Login />,
+  },
   {
     path: "/",
     element: (
@@ -32,10 +34,6 @@ const router = createBrowserRouter([
         element: <Dashboard />,
       },
     ],
-  },
-  {
-    path: "login",
-    element: <Login />,
   },
 ]);
 

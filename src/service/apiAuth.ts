@@ -7,6 +7,6 @@ export const login = async (user: IForm) => {
 };
 
 export const validateToken = async () => {
-  const { data } = await axiosInstance.get(`auth/validate-token`);
-  return data;
+  const data = await axiosInstance.get(`auth/validate-token`);
+  return data.status;
 };

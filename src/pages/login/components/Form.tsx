@@ -6,14 +6,17 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { IForm } from "@Shared/constant/interfaceAuth";
 import { useMutation } from "@tanstack/react-query";
 import { login } from "@Service/apiAuth";
+import { useNavigate } from "react-router-dom";
 
 const Form = () => {
   const { register, handleSubmit, setValue } = useForm<IForm>();
+  const navigate = useNavigate();
 
   const { mutate } = useMutation({
     mutationFn: login,
     onSuccess: (response) => {
       localStorage.setItem("token", response.data.token);
+      navigate("/");
     },
   });
 
