@@ -8,7 +8,7 @@ import "primeflex/primeflex.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <PrimeReactProvider>
+    <PrimeReactProvider value={{ ripple: true }}>
       <App />
     </PrimeReactProvider>
   </StrictMode>
