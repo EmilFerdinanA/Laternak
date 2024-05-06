@@ -5,4 +5,12 @@ import tsconfigPaths from "vite-tsconfig-paths";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), tsconfigPaths()],
+  server: {
+    proxy: {
+      "/api": {
+        target: "https://4663-180-248-20-162.ngrok-free.app",
+        changeOrigin: true,
+      },
+    },
+  },
 });
