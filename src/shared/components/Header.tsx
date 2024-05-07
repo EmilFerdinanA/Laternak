@@ -39,9 +39,15 @@ const Header = () => {
     />
   );
 
+  const burgerButton: JSX.Element = <i className="pi pi-bars md:hidden" />;
+
   return (
     <>
-      <Menubar end={profile} className="h-20 bg-gray-100 shadow-sm" />
+      <Menubar
+        start={burgerButton}
+        end={profile}
+        className="h-20 bg-gray-100 shadow-sm"
+      />
       <Menu model={items} popup ref={menuProfie} />
     </>
   );

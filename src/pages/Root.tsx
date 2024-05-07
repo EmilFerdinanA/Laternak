@@ -8,7 +8,7 @@ const Root = () => {
       <Sidebar />
       <div className="flex flex-col w-full">
         <Header />
-        <div className="p-8">
+        <div className="p-8 overflow-auto">
           <Outlet />
         </div>
       </div>

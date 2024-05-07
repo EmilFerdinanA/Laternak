@@ -3,6 +3,7 @@ import Dashboard from "@Pages/dashboard/Index";
 import Login from "@Pages/login/Index";
 import Root from "pages/Root";
 import ProtectedRoute from "./ProtectedRoute";
+import User from "@Pages/user";
 
 const router = createBrowserRouter([
   {
@@ -23,7 +24,7 @@ const router = createBrowserRouter([
       },
       {
         path: "user",
-        element: <Dashboard />,
+        element: <User />,
       },
       {
         path: "product",
